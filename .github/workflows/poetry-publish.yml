@@ -49,14 +49,14 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
       #----------------------------------------------
-      #             build package
+      # configure poetry
       #----------------------------------------------
-      - name: Build package
+      - name: Poetry config
+        run: poetry config pypi-token.pypi ${{secrets.PYPI_TEST_TOKEN}}
+      #----------------------------------------------
+      #             build and publish package
+      #----------------------------------------------
+      - name: Build and Publish
         run: |
           source .venv/bin/activate
-          poetry build
-      #----------------------------------------------
-      #             publish package
-      #----------------------------------------------
-      - name: publish package
-        run: poetry publish --username ${{secrets.PYPI_USERNAME}} --password ${{secrets.PYPI_TEST_TOKEN}}
+          poetry publish --build

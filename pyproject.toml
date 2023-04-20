@@ -14,12 +14,6 @@ python = "^3.10"
 pytest = "^7.3.1"
 
 
-[[tool.poetry.source]]
-name = "pypi-test"
-url = "https://test.pypi.org/github-actions-louxsdon/"
-default = true
-secondary = false
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
