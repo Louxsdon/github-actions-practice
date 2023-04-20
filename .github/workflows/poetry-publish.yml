@@ -1,6 +1,8 @@
 name: Poetry Publish to PyPi
 
-on: release
+on:
+  release:
+    types: published
 
 jobs:
   test:
