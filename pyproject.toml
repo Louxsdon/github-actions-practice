@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "github-actions"
+name = "github-actions-tests-louxsdon"
 version = "0.1.0"
 description = ""
 authors = ["louxsdon <louisayivi.dev@gmail.com>"]
@@ -12,6 +12,13 @@ python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
+
+
+[[tool.poetry.source]]
+name = "pypi-test"
+url = "https://test.pypi.org/github-actions-louxsdon/"
+default = true
+secondary = false
 
 [build-system]
 requires = ["poetry-core"]
