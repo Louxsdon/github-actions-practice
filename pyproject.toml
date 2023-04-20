@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "github-actions-tests-louxsdon"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["louxsdon <louisayivi.dev@gmail.com>"]
 readme = "README.md"
