@@ -49,9 +49,14 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
       #----------------------------------------------
-      #              run test suite
+      #             build package
       #----------------------------------------------
-      - name: Run tests
+      - name: Build package
         run: |
           source .venv/bin/activate
-          poetry run python -V
+          poetry build
+      #----------------------------------------------
+      #             publish package
+      #----------------------------------------------
+      - name: publish package
+        run: poetry publish
