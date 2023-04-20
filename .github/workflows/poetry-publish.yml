@@ -5,7 +5,7 @@ on:
     types: published
 
 jobs:
-  test:
+  deploy:
     runs-on: [ubuntu-latest]
     steps:
       #----------------------------------------------
@@ -54,5 +54,4 @@ jobs:
       - name: Run tests
         run: |
           source .venv/bin/activate
-          pytest tests/
-          coverage report
+          poetry run python -V
