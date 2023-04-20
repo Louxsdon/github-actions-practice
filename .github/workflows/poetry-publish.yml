@@ -52,7 +52,9 @@ jobs:
       # configure poetry
       #----------------------------------------------
       - name: Poetry config
-        run: poetry config pypi-token.pypi "${{secrets.PYPI_TEST_TOKEN}}"
+        run: |
+          poetry config pypi-token.pypi ${{secrets.PYPI_TEST_TOKEN}}
+          poetry config --list
       #----------------------------------------------
       #             build and publish package
       #----------------------------------------------
