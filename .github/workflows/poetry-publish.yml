@@ -59,4 +59,4 @@ jobs:
       #             publish package
       #----------------------------------------------
       - name: publish package
-        run: poetry publish
+        run: poetry publish --username ${{secrets.PYPI_USERNAME}} --password ${{secrets.PYPI_TEST_TOKEN}}
