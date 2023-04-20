@@ -56,7 +56,14 @@ jobs:
       #----------------------------------------------
       #             build and publish package
       #----------------------------------------------
-      - name: Build and Publish
+      - name: Build Package
         run: |
           source .venv/bin/activate
-          poetry publish --build
+          poetry build
+      #----------------------------------------------
+      #             build and publish package
+      #----------------------------------------------
+      - name: Publish Build
+        run: |
+          source .venv/bin/activate
+          poetry publish
